@@ -184,6 +184,8 @@ missing
 stamp-h1
 aac-enc
 
+.dirstamp
+compile
 
 #Ensure files required by SMC msvc builds are included
 !SMC/*.h
