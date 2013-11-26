@@ -653,7 +653,7 @@
       <SDLCheck>false</SDLCheck>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
-      <AdditionalIncludeDirectories>../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSBRdec/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSBRdec/include;../libSYS/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <DisableSpecificWarnings>4018</DisableSpecificWarnings>
@@ -686,7 +686,7 @@ copy ..\NOTICE $(OutputPath)\licenses\fdk-aac.txt</Command>
       <SDLCheck>false</SDLCheck>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
-      <AdditionalIncludeDirectories>../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSBRdec/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSBRdec/include;../libSYS/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;__x86_64__;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <DisableSpecificWarnings>4018</DisableSpecificWarnings>
@@ -719,7 +719,7 @@ copy ..\NOTICE $(OutputPath)\licenses\fdk-aac.txt</Command>
       <SDLCheck>false</SDLCheck>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
-      <AdditionalIncludeDirectories>../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSBRdec/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSBRdec/include;../libSYS/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <DisableSpecificWarnings>4018</DisableSpecificWarnings>
@@ -752,7 +752,7 @@ copy ..\NOTICE $(OutputPath)\licenses\fdk-aac.txt</Command>
       <SDLCheck>false</SDLCheck>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
-      <AdditionalIncludeDirectories>../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSBRdec/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSBRdec/include;../libSYS/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;__x86_64__;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <DisableSpecificWarnings>4018</DisableSpecificWarnings>
@@ -796,7 +796,7 @@ copy ..\NOTICE $(OutputPath)\licenses\fdk-aac.txt</Command>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
-      <AdditionalIncludeDirectories>../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSBRdec/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSBRdec/include;../libSYS/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DisableSpecificWarnings>4018</DisableSpecificWarnings>
     </ClCompile>
@@ -841,7 +841,7 @@ copy ..\NOTICE $(OutputPath)\licenses\fdk-aac.txt</Command>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
-      <AdditionalIncludeDirectories>../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSBRdec/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSBRdec/include;../libSYS/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;__x86_64__;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DisableSpecificWarnings>4018</DisableSpecificWarnings>
     </ClCompile>
@@ -886,7 +886,7 @@ copy ..\NOTICE $(OutputPath)\licenses\fdk-aac.txt</Command>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
-      <AdditionalIncludeDirectories>../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSBRdec/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSBRdec/include;../libSYS/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DisableSpecificWarnings>4018</DisableSpecificWarnings>
     </ClCompile>
@@ -931,7 +931,7 @@ copy ..\NOTICE $(OutputPath)\licenses\fdk-aac.txt</Command>
       <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
-      <AdditionalIncludeDirectories>../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSBRdec/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSBRdec/include;../libSYS/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>WIN32;__x86_64__;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DisableSpecificWarnings>4018</DisableSpecificWarnings>
     </ClCompile>
