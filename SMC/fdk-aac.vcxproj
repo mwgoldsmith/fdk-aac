@@ -663,20 +663,20 @@
       <ModuleDefinitionFile>fdkaac.def</ModuleDefinitionFile>
     </Link>
     <Lib>
-      <OutputFile>$(OutDir)\lib\$(TargetName)$(TargetExt)</OutputFile>
+      <OutputFile>$(OutDir)\lib\msvc32\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX86</TargetMachine>
       <SubSystem>Windows</SubSystem>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutputPath)\include
-mkdir $(OutputPath)\include\fdk-aac
-copy ..\libSYS\include\machine_type.h $(OutputPath)\include\fdk-aac
-copy ..\libSYS\include\libSYS/include/genericStds.h $(OutputPath)\include\fdk-aac
-copy ..\libSYS\include\FDK_audio.h $(OutputPath)\include\fdk-aac
-copy ..\libAACenc\include\aacenc_lib.h $(OutputPath)\include\fdk-aac
-copy ..\libAACdec\include\aacdecoder_lib.h $(OutputPath)\include\fdk-aac
-mkdir $(OutputPath)\licenses
-copy ..\NOTICE $(OutputPath)\licenses\fdk-aac.txt</Command>
+      <Command>mkdir $(OutDir)\include\msvc
+mkdir $(OutDir)\include\msvc\fdk-aac
+copy ..\libSYS\include\machine_type.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libSYS\include\libSYS/include/genericStds.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libAACenc\include\aacenc_lib.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libAACdec\include\aacdecoder_lib.h $(OutDir)\include\msvc\fdk-aac
+mkdir $(OutDir)\licenses
+copy ..\NOTICE $(OutDir)\licenses\fdk-aac.txt</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -696,20 +696,20 @@ copy ..\NOTICE $(OutputPath)\licenses\fdk-aac.txt</Command>
       <ModuleDefinitionFile>fdkaac.def</ModuleDefinitionFile>
     </Link>
     <Lib>
-      <OutputFile>$(OutDir)\lib\x64\$(TargetName)$(TargetExt)</OutputFile>
+      <OutputFile>$(OutDir)\lib\msvc64\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX64</TargetMachine>
       <SubSystem>Windows</SubSystem>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutputPath)\include
-mkdir $(OutputPath)\include\fdk-aac
-copy ..\libSYS\include\machine_type.h $(OutputPath)\include\fdk-aac
-copy ..\libSYS\include\libSYS/include/genericStds.h $(OutputPath)\include\fdk-aac
-copy ..\libSYS\include\FDK_audio.h $(OutputPath)\include\fdk-aac
-copy ..\libAACenc\include\aacenc_lib.h $(OutputPath)\include\fdk-aac
-copy ..\libAACdec\include\aacdecoder_lib.h $(OutputPath)\include\fdk-aac
-mkdir $(OutputPath)\licenses
-copy ..\NOTICE $(OutputPath)\licenses\fdk-aac.txt</Command>
+      <Command>mkdir $(OutDir)\include\msvc
+mkdir $(OutDir)\include\msvc\fdk-aac
+copy ..\libSYS\include\machine_type.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libSYS\include\libSYS/include/genericStds.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libAACenc\include\aacenc_lib.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libAACdec\include\aacdecoder_lib.h $(OutDir)\include\msvc\fdk-aac
+mkdir $(OutDir)\licenses
+copy ..\NOTICE $(OutDir)\licenses\fdk-aac.txt</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
@@ -726,23 +726,23 @@ copy ..\NOTICE $(OutputPath)\licenses\fdk-aac.txt</Command>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
-      <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
+      <OutputFile>$(OutDir)\bin\msvc32\$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>$(OutDir)\bin\msvc32\$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
-      <ImportLibrary>$(OutDir)\lib\$(TargetName).lib</ImportLibrary>
-      <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
+      <ImportLibrary>$(OutDir)\lib\msvc32\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(OutDir)\bin\msvc32\$(TargetName).pgd</ProfileGuidedDatabase>
       <ModuleDefinitionFile>fdk-aac.def</ModuleDefinitionFile>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutputPath)\include
-mkdir $(OutputPath)\include\fdk-aac
-copy ..\libSYS\include\machine_type.h $(OutputPath)\include\fdk-aac
-copy ..\libSYS\include\libSYS/include/genericStds.h $(OutputPath)\include\fdk-aac
-copy ..\libSYS\include\FDK_audio.h $(OutputPath)\include\fdk-aac
-copy ..\libAACenc\include\aacenc_lib.h $(OutputPath)\include\fdk-aac
-copy ..\libAACdec\include\aacdecoder_lib.h $(OutputPath)\include\fdk-aac
-mkdir $(OutputPath)\licenses
-copy ..\NOTICE $(OutputPath)\licenses\fdk-aac.txt</Command>
+      <Command>mkdir $(OutDir)\include\msvc
+mkdir $(OutDir)\include\msvc\fdk-aac
+copy ..\libSYS\include\machine_type.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libSYS\include\libSYS/include/genericStds.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libAACenc\include\aacenc_lib.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libAACdec\include\aacdecoder_lib.h $(OutDir)\include\msvc\fdk-aac
+mkdir $(OutDir)\licenses
+copy ..\NOTICE $(OutDir)\licenses\fdk-aac.txt</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
@@ -759,23 +759,23 @@ copy ..\NOTICE $(OutputPath)\licenses\fdk-aac.txt</Command>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <OutputFile>$(OutDir)\bin\x64\$(TargetName)$(TargetExt)</OutputFile>
-      <ProgramDatabaseFile>$(OutDir)\bin\x64\$(TargetName).pdb</ProgramDatabaseFile>
+      <OutputFile>$(OutDir)\bin\msvc64\$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>$(OutDir)\bin\msvc64\$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
-      <ImportLibrary>$(OutDir)\lib\x64\$(TargetName).lib</ImportLibrary>
-      <ProfileGuidedDatabase>$(OutDir)\bin\x64\$(TargetName).pgd</ProfileGuidedDatabase>
+      <ImportLibrary>$(OutDir)\lib\msvc64\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(OutDir)\bin\msvc64\$(TargetName).pgd</ProfileGuidedDatabase>
       <ModuleDefinitionFile>fdk-aac.def</ModuleDefinitionFile>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutputPath)\include
-mkdir $(OutputPath)\include\fdk-aac
-copy ..\libSYS\include\machine_type.h $(OutputPath)\include\fdk-aac
-copy ..\libSYS\include\libSYS/include/genericStds.h $(OutputPath)\include\fdk-aac
-copy ..\libSYS\include\FDK_audio.h $(OutputPath)\include\fdk-aac
-copy ..\libAACenc\include\aacenc_lib.h $(OutputPath)\include\fdk-aac
-copy ..\libAACdec\include\aacdecoder_lib.h $(OutputPath)\include\fdk-aac
-mkdir $(OutputPath)\licenses
-copy ..\NOTICE $(OutputPath)\licenses\fdk-aac.txt</Command>
+      <Command>mkdir $(OutDir)\include\msvc
+mkdir $(OutDir)\include\msvc\fdk-aac
+copy ..\libSYS\include\machine_type.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libSYS\include\libSYS/include/genericStds.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libAACenc\include\aacenc_lib.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libAACdec\include\aacdecoder_lib.h $(OutDir)\include\msvc\fdk-aac
+mkdir $(OutDir)\licenses
+copy ..\NOTICE $(OutDir)\licenses\fdk-aac.txt</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -807,20 +807,20 @@ copy ..\NOTICE $(OutputPath)\licenses\fdk-aac.txt</Command>
       <ModuleDefinitionFile>fdkaac.def</ModuleDefinitionFile>
     </Link>
     <Lib>
-      <OutputFile>$(OutDir)\lib\$(TargetName)$(TargetExt)</OutputFile>
+      <OutputFile>$(OutDir)\lib\msvc32\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX86</TargetMachine>
       <SubSystem>Windows</SubSystem>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutputPath)\include
-mkdir $(OutputPath)\include\fdk-aac
-copy ..\libSYS\include\machine_type.h $(OutputPath)\include\fdk-aac
-copy ..\libSYS\include\libSYS/include/genericStds.h $(OutputPath)\include\fdk-aac
-copy ..\libSYS\include\FDK_audio.h $(OutputPath)\include\fdk-aac
-copy ..\libAACenc\include\aacenc_lib.h $(OutputPath)\include\fdk-aac
-copy ..\libAACdec\include\aacdecoder_lib.h $(OutputPath)\include\fdk-aac
-mkdir $(OutputPath)\licenses
-copy ..\NOTICE $(OutputPath)\licenses\fdk-aac.txt</Command>
+      <Command>mkdir $(OutDir)\include\msvc
+mkdir $(OutDir)\include\msvc\fdk-aac
+copy ..\libSYS\include\machine_type.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libSYS\include\libSYS/include/genericStds.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libAACenc\include\aacenc_lib.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libAACdec\include\aacdecoder_lib.h $(OutDir)\include\msvc\fdk-aac
+mkdir $(OutDir)\licenses
+copy ..\NOTICE $(OutDir)\licenses\fdk-aac.txt</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -852,20 +852,20 @@ copy ..\NOTICE $(OutputPath)\licenses\fdk-aac.txt</Command>
       <ModuleDefinitionFile>fdkaac.def</ModuleDefinitionFile>
     </Link>
     <Lib>
-      <OutputFile>$(OutDir)\lib\x64\$(TargetName)$(TargetExt)</OutputFile>
+      <OutputFile>$(OutDir)\lib\msvc64\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX64</TargetMachine>
       <SubSystem>Windows</SubSystem>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutputPath)\include
-mkdir $(OutputPath)\include\fdk-aac
-copy ..\libSYS\include\machine_type.h $(OutputPath)\include\fdk-aac
-copy ..\libSYS\include\libSYS/include/genericStds.h $(OutputPath)\include\fdk-aac
-copy ..\libSYS\include\FDK_audio.h $(OutputPath)\include\fdk-aac
-copy ..\libAACenc\include\aacenc_lib.h $(OutputPath)\include\fdk-aac
-copy ..\libAACdec\include\aacdecoder_lib.h $(OutputPath)\include\fdk-aac
-mkdir $(OutputPath)\licenses
-copy ..\NOTICE $(OutputPath)\licenses\fdk-aac.txt</Command>
+      <Command>mkdir $(OutDir)\include\msvc
+mkdir $(OutDir)\include\msvc\fdk-aac
+copy ..\libSYS\include\machine_type.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libSYS\include\libSYS/include/genericStds.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libAACenc\include\aacenc_lib.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libAACdec\include\aacdecoder_lib.h $(OutDir)\include\msvc\fdk-aac
+mkdir $(OutDir)\licenses
+copy ..\NOTICE $(OutDir)\licenses\fdk-aac.txt</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
@@ -894,23 +894,23 @@ copy ..\NOTICE $(OutputPath)\licenses\fdk-aac.txt</Command>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
-      <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
+      <OutputFile>$(OutDir)\bin\msvc32\$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>$(OutDir)\bin\msvc32\$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
-      <ImportLibrary>$(OutDir)\lib\$(TargetName).lib</ImportLibrary>
-      <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
+      <ImportLibrary>$(OutDir)\lib\msvc32\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(OutDir)\bin\msvc32\$(TargetName).pgd</ProfileGuidedDatabase>
       <ModuleDefinitionFile>fdk-aac.def</ModuleDefinitionFile>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutputPath)\include
-mkdir $(OutputPath)\include\fdk-aac
-copy ..\libSYS\include\machine_type.h $(OutputPath)\include\fdk-aac
-copy ..\libSYS\include\libSYS/include/genericStds.h $(OutputPath)\include\fdk-aac
-copy ..\libSYS\include\FDK_audio.h $(OutputPath)\include\fdk-aac
-copy ..\libAACenc\include\aacenc_lib.h $(OutputPath)\include\fdk-aac
-copy ..\libAACdec\include\aacdecoder_lib.h $(OutputPath)\include\fdk-aac
-mkdir $(OutputPath)\licenses
-copy ..\NOTICE $(OutputPath)\licenses\fdk-aac.txt</Command>
+      <Command>mkdir $(OutDir)\include\msvc
+mkdir $(OutDir)\include\msvc\fdk-aac
+copy ..\libSYS\include\machine_type.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libSYS\include\libSYS/include/genericStds.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libAACenc\include\aacenc_lib.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libAACdec\include\aacdecoder_lib.h $(OutDir)\include\msvc\fdk-aac
+mkdir $(OutDir)\licenses
+copy ..\NOTICE $(OutDir)\licenses\fdk-aac.txt</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
@@ -939,23 +939,23 @@ copy ..\NOTICE $(OutputPath)\licenses\fdk-aac.txt</Command>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
-      <OutputFile>$(OutDir)\bin\x64\$(TargetName)$(TargetExt)</OutputFile>
-      <ProgramDatabaseFile>$(OutDir)\bin\x64\$(TargetName).pdb</ProgramDatabaseFile>
+      <OutputFile>$(OutDir)\bin\msvc64\$(TargetName)$(TargetExt)</OutputFile>
+      <ProgramDatabaseFile>$(OutDir)\bin\msvc64\$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
-      <ImportLibrary>$(OutDir)\lib\x64\$(TargetName).lib</ImportLibrary>
-      <ProfileGuidedDatabase>$(OutDir)\bin\x64\$(TargetName).pgd</ProfileGuidedDatabase>
+      <ImportLibrary>$(OutDir)\lib\msvc64\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(OutDir)\bin\msvc64\$(TargetName).pgd</ProfileGuidedDatabase>
       <ModuleDefinitionFile>fdk-aac.def</ModuleDefinitionFile>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutputPath)\include
-mkdir $(OutputPath)\include\fdk-aac
-copy ..\libSYS\include\machine_type.h $(OutputPath)\include\fdk-aac
-copy ..\libSYS\include\libSYS/include/genericStds.h $(OutputPath)\include\fdk-aac
-copy ..\libSYS\include\FDK_audio.h $(OutputPath)\include\fdk-aac
-copy ..\libAACenc\include\aacenc_lib.h $(OutputPath)\include\fdk-aac
-copy ..\libAACdec\include\aacdecoder_lib.h $(OutputPath)\include\fdk-aac
-mkdir $(OutputPath)\licenses
-copy ..\NOTICE $(OutputPath)\licenses\fdk-aac.txt</Command>
+      <Command>mkdir $(OutDir)\include\msvc
+mkdir $(OutDir)\include\msvc\fdk-aac
+copy ..\libSYS\include\machine_type.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libSYS\include\libSYS/include/genericStds.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libAACenc\include\aacenc_lib.h $(OutDir)\include\msvc\fdk-aac
+copy ..\libAACdec\include\aacdecoder_lib.h $(OutDir)\include\msvc\fdk-aac
+mkdir $(OutDir)\licenses
+copy ..\NOTICE $(OutDir)\licenses\fdk-aac.txt</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
