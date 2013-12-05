@@ -675,8 +675,8 @@
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\machine_type.h $(OutDir)\include\fdk-aac
-copy ..\libSYS\include\libSYS/include/genericStds.h $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\fdk-aac
+copy ..\libSYS\include\genericStds.h $(OutDir)\include\fdk-aac
 copy ..\libAACenc\include\aacenc_lib.h $(OutDir)\include\fdk-aac
 copy ..\libAACdec\include\aacdecoder_lib.h $(OutDir)\include\fdk-aac
 mkdir $(OutDir)\licenses
@@ -708,8 +708,8 @@ copy ..\NOTICE $(OutDir)\licenses\fdk-aac.txt</Command>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\machine_type.h $(OutDir)\include\fdk-aac
-copy ..\libSYS\include\libSYS/include/genericStds.h $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\fdk-aac
+copy ..\libSYS\include\genericStds.h $(OutDir)\include\fdk-aac
 copy ..\libAACenc\include\aacenc_lib.h $(OutDir)\include\fdk-aac
 copy ..\libAACdec\include\aacdecoder_lib.h $(OutDir)\include\fdk-aac
 mkdir $(OutDir)\licenses
@@ -741,8 +741,8 @@ copy ..\NOTICE $(OutDir)\licenses\fdk-aac.txt</Command>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\machine_type.h $(OutDir)\include\fdk-aac
-copy ..\libSYS\include\libSYS/include/genericStds.h $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\fdk-aac
+copy ..\libSYS\include\genericStds.h $(OutDir)\include\fdk-aac
 copy ..\libAACenc\include\aacenc_lib.h $(OutDir)\include\fdk-aac
 copy ..\libAACdec\include\aacdecoder_lib.h $(OutDir)\include\fdk-aac
 mkdir $(OutDir)\licenses
@@ -774,8 +774,8 @@ copy ..\NOTICE $(OutDir)\licenses\fdk-aac.txt</Command>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\machine_type.h $(OutDir)\include\fdk-aac
-copy ..\libSYS\include\libSYS/include/genericStds.h $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\fdk-aac
+copy ..\libSYS\include\genericStds.h $(OutDir)\include\fdk-aac
 copy ..\libAACenc\include\aacenc_lib.h $(OutDir)\include\fdk-aac
 copy ..\libAACdec\include\aacdecoder_lib.h $(OutDir)\include\fdk-aac
 mkdir $(OutDir)\licenses
@@ -819,8 +819,8 @@ copy ..\NOTICE $(OutDir)\licenses\fdk-aac.txt</Command>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\machine_type.h $(OutDir)\include\fdk-aac
-copy ..\libSYS\include\libSYS/include/genericStds.h $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\fdk-aac
+copy ..\libSYS\include\genericStds.h $(OutDir)\include\fdk-aac
 copy ..\libAACenc\include\aacenc_lib.h $(OutDir)\include\fdk-aac
 copy ..\libAACdec\include\aacdecoder_lib.h $(OutDir)\include\fdk-aac
 mkdir $(OutDir)\licenses
@@ -864,8 +864,8 @@ copy ..\NOTICE $(OutDir)\licenses\fdk-aac.txt</Command>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\machine_type.h $(OutDir)\include\fdk-aac
-copy ..\libSYS\include\libSYS/include/genericStds.h $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\fdk-aac
+copy ..\libSYS\include\genericStds.h $(OutDir)\include\fdk-aac
 copy ..\libAACenc\include\aacenc_lib.h $(OutDir)\include\fdk-aac
 copy ..\libAACdec\include\aacdecoder_lib.h $(OutDir)\include\fdk-aac
 mkdir $(OutDir)\licenses
@@ -909,8 +909,8 @@ copy ..\NOTICE $(OutDir)\licenses\fdk-aac.txt</Command>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\machine_type.h $(OutDir)\include\fdk-aac
-copy ..\libSYS\include\libSYS/include/genericStds.h $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\fdk-aac
+copy ..\libSYS\include\genericStds.h $(OutDir)\include\fdk-aac
 copy ..\libAACenc\include\aacenc_lib.h $(OutDir)\include\fdk-aac
 copy ..\libAACdec\include\aacdecoder_lib.h $(OutDir)\include\fdk-aac
 mkdir $(OutDir)\licenses
@@ -954,8 +954,8 @@ copy ..\NOTICE $(OutDir)\licenses\fdk-aac.txt</Command>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\machine_type.h $(OutDir)\include\fdk-aac
-copy ..\libSYS\include\libSYS/include/genericStds.h $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\fdk-aac
+copy ..\libSYS\include\genericStds.h $(OutDir)\include\fdk-aac
 copy ..\libAACenc\include\aacenc_lib.h $(OutDir)\include\fdk-aac
 copy ..\libAACdec\include\aacdecoder_lib.h $(OutDir)\include\fdk-aac
 mkdir $(OutDir)\licenses
