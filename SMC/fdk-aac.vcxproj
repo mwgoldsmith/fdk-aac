@@ -673,6 +673,9 @@
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
+if exist $(OutDir)\include\fdk-aac (
+rd /s /q $(OutDir)\include\fdk-aac
+)
 mkdir $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\machine_type.h $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\fdk-aac
@@ -706,6 +709,9 @@ copy ..\NOTICE $(OutDir)\licenses\fdk-aac.txt</Command>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
+if exist $(OutDir)\include\fdk-aac (
+rd /s /q $(OutDir)\include\fdk-aac
+)
 mkdir $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\machine_type.h $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\fdk-aac
@@ -738,6 +744,9 @@ copy ..\NOTICE $(OutDir)\licenses\fdk-aac.txt</Command>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
+if exist $(OutDir)\include\fdk-aac (
+rd /s /q $(OutDir)\include\fdk-aac
+)
 mkdir $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\machine_type.h $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\fdk-aac
@@ -770,6 +779,9 @@ copy ..\NOTICE $(OutDir)\licenses\fdk-aac.txt</Command>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
+if exist $(OutDir)\include\fdk-aac (
+rd /s /q $(OutDir)\include\fdk-aac
+)
 mkdir $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\machine_type.h $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\fdk-aac
@@ -815,6 +827,9 @@ copy ..\NOTICE $(OutDir)\licenses\fdk-aac.txt</Command>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
+if exist $(OutDir)\include\fdk-aac (
+rd /s /q $(OutDir)\include\fdk-aac
+)
 mkdir $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\machine_type.h $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\fdk-aac
@@ -860,6 +875,9 @@ copy ..\NOTICE $(OutDir)\licenses\fdk-aac.txt</Command>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
+if exist $(OutDir)\include\fdk-aac (
+rd /s /q $(OutDir)\include\fdk-aac
+)
 mkdir $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\machine_type.h $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\fdk-aac
@@ -904,6 +922,9 @@ copy ..\NOTICE $(OutDir)\licenses\fdk-aac.txt</Command>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
+if exist $(OutDir)\include\fdk-aac (
+rd /s /q $(OutDir)\include\fdk-aac
+)
 mkdir $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\machine_type.h $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\fdk-aac
@@ -948,6 +969,9 @@ copy ..\NOTICE $(OutDir)\licenses\fdk-aac.txt</Command>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
+if exist $(OutDir)\include\fdk-aac (
+rd /s /q $(OutDir)\include\fdk-aac
+)
 mkdir $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\machine_type.h $(OutDir)\include\fdk-aac
 copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\fdk-aac
