@@ -549,9 +549,6 @@
     <ClInclude Include="..\libSYS\include\audio.h">
       <Filter>Header Files\libSYS</Filter>
     </ClInclude>
-    <ClInclude Include="..\libSYS\include\cmdl_parser.h">
-      <Filter>Header Files\libSYS</Filter>
-    </ClInclude>
     <ClInclude Include="..\libSYS\include\conv_string.h">
       <Filter>Header Files\libSYS</Filter>
     </ClInclude>
@@ -906,9 +903,6 @@
       <Filter>Source Files\libSYS</Filter>
     </ClCompile>
     <ClCompile Include="..\libSYS\src\wav_file.cpp">
-      <Filter>Source Files\libSYS</Filter>
-    </ClCompile>
-    <ClCompile Include="..\libSYS\src\cmdl_parser.cpp">
       <Filter>Source Files\libSYS</Filter>
     </ClCompile>
   </ItemGroup>
