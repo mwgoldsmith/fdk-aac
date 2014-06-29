@@ -25,6 +25,14 @@
       <Configuration>ReleaseDLL</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseLTO|Win32">
+      <Configuration>ReleaseLTO</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseLTO|x64">
+      <Configuration>ReleaseLTO</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
     <ProjectConfiguration Include="Release|Win32">
       <Configuration>Release</Configuration>
       <Platform>Win32</Platform>
@@ -315,10 +323,12 @@
     <ClCompile Include="..\libSBRdec\src\sbr_ram.cpp">
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)\sbr_ram2.obj</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)\sbr_ram2.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">$(IntDir)\sbr_ram2.obj</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">$(IntDir)\sbr_ram2.obj</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">$(IntDir)\sbr_ram2.obj</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)\sbr_ram2.obj</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)\sbr_ram2.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">$(IntDir)\sbr_ram2.obj</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">$(IntDir)\sbr_ram2.obj</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">$(IntDir)\sbr_ram2.obj</ObjectFileName>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRdec/include;../libSYS/include</AdditionalIncludeDirectories>
@@ -326,10 +336,12 @@
     <ClCompile Include="..\libSBRdec\src\sbr_rom.cpp">
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)\sbr_rom2.obj</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)\sbr_rom2.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">$(IntDir)\sbr_rom2.obj</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">$(IntDir)\sbr_rom2.obj</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">$(IntDir)\sbr_rom2.obj</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)\sbr_rom2.obj</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)\sbr_rom2.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">$(IntDir)\sbr_rom2.obj</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">$(IntDir)\sbr_rom2.obj</ObjectFileName>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">$(IntDir)\sbr_rom2.obj</ObjectFileName>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRdec/include;../libSYS/include</AdditionalIncludeDirectories>
@@ -337,190 +349,228 @@
     <ClCompile Include="..\libSBRenc\src\bit_sbr.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\libSBRenc\src\code_env.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\libSBRenc\src\env_bit.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\libSBRenc\src\env_est.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\libSBRenc\src\fram_gen.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\libSBRenc\src\invf_est.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\libSBRenc\src\mh_det.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\libSBRenc\src\nf_est.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\libSBRenc\src\ps_bitenc.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\libSBRenc\src\ps_encode.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\libSBRenc\src\ps_main.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\libSBRenc\src\resampler.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\libSBRenc\src\sbrenc_freq_sca.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\libSBRenc\src\sbr_encoder.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\libSBRenc\src\sbr_misc.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\libSBRenc\src\sbr_ram.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\libSBRenc\src\sbr_rom.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\libSBRenc\src\ton_corr.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
     </ClCompile>
     <ClCompile Include="..\libSBRenc\src\tran_det.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSYS/include</AdditionalIncludeDirectories>
     </ClCompile>
@@ -566,11 +616,25 @@
     <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
@@ -604,7 +668,13 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'" Label="PropertySheets">
@@ -639,7 +709,17 @@
     <IntDir>$(SolutionDir)\obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <TargetName>libfdk-aac</TargetName>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">
+    <OutDir>..\..\..\msvc32\</OutDir>
+    <IntDir>$(SolutionDir)\obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <TargetName>libfdk-aac</TargetName>
+  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IntDir>$(SolutionDir)\obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
+    <TargetName>libfdk-aac</TargetName>
+    <OutDir>..\..\..\msvc64\</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">
     <IntDir>$(SolutionDir)\obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <TargetName>libfdk-aac</TargetName>
     <OutDir>..\..\..\msvc64\</OutDir>
@@ -748,9 +828,9 @@ cd $(ProjectDir)
     </ClCompile>
     <Link>
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
-      <ProgramDatabaseFile>$(OutDir)\lib\$(TargetName).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
-      <ImportLibrary>$(OutDir)\lib\$(TargetName).dll.lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
       <ModuleDefinitionFile>fdk-aac.def</ModuleDefinitionFile>
     </Link>
@@ -787,9 +867,9 @@ cd $(ProjectDir)
     </ClCompile>
     <Link>
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
-      <ProgramDatabaseFile>$(OutDir)\lib\$(TargetName).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
-      <ImportLibrary>$(OutDir)\lib\$(TargetName).dll.lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
       <ModuleDefinitionFile>fdk-aac.def</ModuleDefinitionFile>
     </Link>
@@ -813,6 +893,59 @@ cd $(ProjectDir)
     </PreBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <OmitFramePointers>true</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <AdditionalIncludeDirectories>../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSBRdec/include;../libSYS/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4018</DisableSpecificWarnings>
+      <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>fdkaac.def</ModuleDefinitionFile>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)\lib\$(TargetName)$(TargetExt)</OutputFile>
+      <TargetMachine>MachineX86</TargetMachine>
+      <SubSystem>Windows</SubSystem>
+    </Lib>
+    <PostBuildEvent>
+      <Command>mkdir $(OutDir)\include
+mkdir $(OutDir)\include\fdk-aac
+copy ..\libSYS\include\machine_type.h $(OutDir)\include\fdk-aac
+copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\fdk-aac
+copy ..\libSYS\include\genericStds.h $(OutDir)\include\fdk-aac
+copy ..\libAACenc\include\aacenc_lib.h $(OutDir)\include\fdk-aac
+copy ..\libAACdec\include\aacdecoder_lib.h $(OutDir)\include\fdk-aac
+mkdir $(OutDir)\licenses
+copy ..\NOTICE $(OutDir)\licenses\fdk-aac.txt</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist $(OutDir)\include\fdk-aac (
+rd /s /q $(OutDir)\include\fdk-aac
+cd ../
+cd $(ProjectDir)
+)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>MaxSpeed</Optimization>
@@ -918,6 +1051,59 @@ cd $(ProjectDir)
 )</Command>
     </PreBuildEvent>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <OmitFramePointers>true</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <AdditionalIncludeDirectories>../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRenc/include;../libSBRdec/include;../libSYS/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;__x86_64__;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <DisableSpecificWarnings>4018</DisableSpecificWarnings>
+      <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>fdkaac.def</ModuleDefinitionFile>
+    </Link>
+    <Lib>
+      <OutputFile>$(OutDir)\lib\$(TargetName)$(TargetExt)</OutputFile>
+      <TargetMachine>MachineX64</TargetMachine>
+      <SubSystem>Windows</SubSystem>
+    </Lib>
+    <PostBuildEvent>
+      <Command>mkdir $(OutDir)\include
+mkdir $(OutDir)\include\fdk-aac
+copy ..\libSYS\include\machine_type.h $(OutDir)\include\fdk-aac
+copy ..\libSYS\include\FDK_audio.h $(OutDir)\include\fdk-aac
+copy ..\libSYS\include\genericStds.h $(OutDir)\include\fdk-aac
+copy ..\libAACenc\include\aacenc_lib.h $(OutDir)\include\fdk-aac
+copy ..\libAACdec\include\aacdecoder_lib.h $(OutDir)\include\fdk-aac
+mkdir $(OutDir)\licenses
+copy ..\NOTICE $(OutDir)\licenses\fdk-aac.txt</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>if exist $(OutDir)\include\fdk-aac (
+rd /s /q $(OutDir)\include\fdk-aac
+cd ../
+cd $(ProjectDir)
+)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -944,9 +1130,9 @@ cd $(ProjectDir)
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
-      <ProgramDatabaseFile>$(OutDir)\lib\$(TargetName).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
-      <ImportLibrary>$(OutDir)\lib\$(TargetName).dll.lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
       <ModuleDefinitionFile>fdk-aac.def</ModuleDefinitionFile>
     </Link>
@@ -995,9 +1181,9 @@ cd $(ProjectDir)
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <OutputFile>$(OutDir)\bin\$(TargetName)$(TargetExt)</OutputFile>
-      <ProgramDatabaseFile>$(OutDir)\lib\$(TargetName).pdb</ProgramDatabaseFile>
+      <ProgramDatabaseFile>$(OutDir)\bin\$(TargetName).pdb</ProgramDatabaseFile>
       <SubSystem>Windows</SubSystem>
-      <ImportLibrary>$(OutDir)\lib\$(TargetName).dll.lib</ImportLibrary>
+      <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
       <ModuleDefinitionFile>fdk-aac.def</ModuleDefinitionFile>
     </Link>
