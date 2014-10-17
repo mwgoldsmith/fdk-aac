@@ -579,11 +579,11 @@
     <ClCompile Include="..\libSYS\src\wav_file.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="fdk-aac.def" />
+    <None Include="libfdk-aac.def" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{7D653A32-EBEF-40AE-AF54-1FF6CC7372C2}</ProjectGuid>
-    <RootNamespace>fdk-aac</RootNamespace>
+    <RootNamespace>libfdk-aac</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -832,7 +832,7 @@ cd $(ProjectDir)
       <SubSystem>Windows</SubSystem>
       <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
-      <ModuleDefinitionFile>fdk-aac.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>libfdk-aac.def</ModuleDefinitionFile>
       <LargeAddressAware>true</LargeAddressAware>
     </Link>
     <PostBuildEvent>
@@ -872,7 +872,7 @@ cd $(ProjectDir)
       <SubSystem>Windows</SubSystem>
       <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
-      <ModuleDefinitionFile>fdk-aac.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>libfdk-aac.def</ModuleDefinitionFile>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
@@ -1135,7 +1135,7 @@ cd $(ProjectDir)
       <SubSystem>Windows</SubSystem>
       <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
-      <ModuleDefinitionFile>fdk-aac.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>libfdk-aac.def</ModuleDefinitionFile>
       <LargeAddressAware>true</LargeAddressAware>
     </Link>
     <PostBuildEvent>
@@ -1187,7 +1187,7 @@ cd $(ProjectDir)
       <SubSystem>Windows</SubSystem>
       <ImportLibrary>$(OutDir)\bin\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(OutDir)\bin\$(TargetName).pgd</ProfileGuidedDatabase>
-      <ModuleDefinitionFile>fdk-aac.def</ModuleDefinitionFile>
+      <ModuleDefinitionFile>libfdk-aac.def</ModuleDefinitionFile>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
