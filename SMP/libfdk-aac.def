@@ -1,7 +1,3 @@
-;
-; $Id$
-; 
-LIBRARY
 EXPORTS
 aacDecoder_AncDataGet
 aacDecoder_AncDataInit
