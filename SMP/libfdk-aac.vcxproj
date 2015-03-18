@@ -150,6 +150,7 @@
     <ClInclude Include="..\libMpegTPEnc\src\tpenc_adts.h" />
     <ClInclude Include="..\libMpegTPEnc\src\tpenc_asc.h" />
     <ClInclude Include="..\libMpegTPEnc\src\tpenc_latm.h" />
+    <ClInclude Include="..\libPCMutils\include\limiter.h" />
     <ClInclude Include="..\libPCMutils\include\pcmutils_lib.h" />
     <ClInclude Include="..\libSBRdec\include\sbrdecoder.h" />
     <ClInclude Include="..\libSBRdec\src\env_calc.h" />
@@ -277,6 +278,7 @@
     <ClCompile Include="..\libMpegTPEnc\src\tpenc_asc.cpp" />
     <ClCompile Include="..\libMpegTPEnc\src\tpenc_latm.cpp" />
     <ClCompile Include="..\libMpegTPEnc\src\tpenc_lib.cpp" />
+    <ClCompile Include="..\libPCMutils\src\limiter.cpp" />
     <ClCompile Include="..\libPCMutils\src\pcmutils_lib.cpp" />
     <ClCompile Include="..\libSBRdec\src\env_calc.cpp">
       <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">../libaacenc/include;../libaacdec/include;../libFDK/include;../libMpegTPEnc/include;../libMpegTPDec/include;../libPCMutils/include;../libSBRdec/include;../libSYS/include</AdditionalIncludeDirectories>

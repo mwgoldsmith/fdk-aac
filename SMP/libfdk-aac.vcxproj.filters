@@ -555,6 +555,9 @@
     <ClInclude Include="..\libSYS\include\FDK_audio.h">
       <Filter>Header Files\libSYS</Filter>
     </ClInclude>
+    <ClInclude Include="..\libPCMutils\include\limiter.h">
+      <Filter>Header Files\libPCMutils</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\libAACdec\src\aac_ram.cpp">
@@ -904,6 +907,9 @@
     </ClCompile>
     <ClCompile Include="..\libSYS\src\wav_file.cpp">
       <Filter>Source Files\libSYS</Filter>
+    </ClCompile>
+    <ClCompile Include="..\libPCMutils\src\limiter.cpp">
+      <Filter>Source Files\libPCMutils</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
