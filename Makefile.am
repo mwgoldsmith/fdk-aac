@@ -130,6 +130,7 @@ MPEGTPENC_SRC = \
     libMpegTPEnc/src/tpenc_lib.cpp
 
 PCMUTILS_SRC = \
+    libPCMutils/src/limiter.cpp \
     libPCMutils/src/pcmutils_lib.cpp
 
 SBRDEC_SRC = \
@@ -210,6 +211,7 @@ EXTRA_DIST = \
     $(top_srcdir)/libFDK/include/*.h \
     $(top_srcdir)/libFDK/include/arm/*.h \
     $(top_srcdir)/libFDK/include/mips/*.h \
+    $(top_srcdir)/libFDK/include/ppc/*.h \
     $(top_srcdir)/libFDK/include/x86/*.h \
     $(top_srcdir)/libFDK/src/arm/*.cpp \
     $(top_srcdir)/libFDK/src/mips/*.cpp

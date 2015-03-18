@@ -107,6 +107,10 @@ amm-info@iis.fraunhofer.de
 #define __arm__
 #endif
 
+#if defined(_ARCH_PPC) && !defined(__powerpc__)
+#define __powerpc__ 1
+#endif
+
 
 
 /* Define __ARM_ARCH_5TE__ if armv5te features are supported  */
@@ -158,7 +162,7 @@ amm-info@iis.fraunhofer.de
 /* Define preferred Multiplication type */
 #if defined(FDK_HIGH_PERFORMANCE) && !defined(FDK_HIGH_QUALITY) /* FDK_HIGH_PERFORMANCE */
 
-#if defined(__mips__) || defined(__powerpc__) || defined(__sh__)
+#if defined(__mips__) || defined(__sh__)
 #define ARCH_PREFER_MULT_16x16
 #undef SINETABLE_16BIT
 #undef POW2COEFF_16BIT
@@ -201,9 +205,17 @@ amm-info@iis.fraunhofer.de
 #define POW2COEFF_16BIT
 #define LDCOEFF_16BIT
 
+#elif defined(__powerpc__)
+#define ARCH_PREFER_MULT_32x32
+#define ARCH_PREFER_MULT_32x16
+#define SINETABLE_16BIT
+#define POW2COEFF_16BIT
+#define LDCOEFF_16BIT
+#define WINDOWTABLE_16BIT
+
 #else
 
-  #error  >>>> Please set architecture characterization defines for your platform (FDK_HIGH_PERFORMANCE)! <<<<
+  #warning  >>>> Please set architecture characterization defines for your platform (FDK_HIGH_PERFORMANCE)! <<<<
 
 #endif /* Architecture switches */
 
