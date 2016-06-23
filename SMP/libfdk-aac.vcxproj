@@ -441,53 +441,63 @@
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <TargetName>libfdk-aacd</TargetName>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <TargetName>libfdk-aacd</TargetName>
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <TargetName>fdk-aacd</TargetName>
     <LinkIncremental>false</LinkIncremental>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <TargetName>fdk-aacd</TargetName>
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <LinkIncremental>false</LinkIncremental>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <TargetName>libfdk-aac</TargetName>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <TargetName>libfdk-aac</TargetName>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <TargetName>libfdk-aac</TargetName>
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <TargetName>libfdk-aac</TargetName>
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <TargetName>fdk-aac</TargetName>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
     <TargetName>fdk-aac</TargetName>
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
+    <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -526,6 +536,18 @@ cd ../
 cd $(ProjectDir)
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\fdk-aac (
+rmdir /s /q $(OutDir)\include\fdk-aac
+)
+if exist $(OutDir)\licenses\fdk-aac.txt (
+del /f /q $(OutDir)\licenses\fdk-aac.txt
+)</Command>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -564,6 +586,18 @@ cd ../
 cd $(ProjectDir)
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\fdk-aac (
+rmdir /s /q $(OutDir)\include\fdk-aac
+)
+if exist $(OutDir)\licenses\fdk-aac.txt (
+del /f /q $(OutDir)\licenses\fdk-aac.txt
+)</Command>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
     <ClCompile>
@@ -603,6 +637,18 @@ cd ../
 cd $(ProjectDir)
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\fdk-aac (
+rmdir /s /q $(OutDir)\include\fdk-aac
+)
+if exist $(OutDir)\licenses\fdk-aac.txt (
+del /f /q $(OutDir)\licenses\fdk-aac.txt
+)</Command>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
     <ClCompile>
@@ -641,6 +687,18 @@ cd ../
 cd $(ProjectDir)
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\fdk-aac (
+rmdir /s /q $(OutDir)\include\fdk-aac
+)
+if exist $(OutDir)\licenses\fdk-aac.txt (
+del /f /q $(OutDir)\licenses\fdk-aac.txt
+)</Command>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -692,6 +750,18 @@ cd ../
 cd $(ProjectDir)
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\fdk-aac (
+rmdir /s /q $(OutDir)\include\fdk-aac
+)
+if exist $(OutDir)\licenses\fdk-aac.txt (
+del /f /q $(OutDir)\licenses\fdk-aac.txt
+)</Command>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">
     <ClCompile>
@@ -743,6 +813,18 @@ cd ../
 cd $(ProjectDir)
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\fdk-aac (
+rmdir /s /q $(OutDir)\include\fdk-aac
+)
+if exist $(OutDir)\licenses\fdk-aac.txt (
+del /f /q $(OutDir)\licenses\fdk-aac.txt
+)</Command>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -794,6 +876,18 @@ cd ../
 cd $(ProjectDir)
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\fdk-aac (
+rmdir /s /q $(OutDir)\include\fdk-aac
+)
+if exist $(OutDir)\licenses\fdk-aac.txt (
+del /f /q $(OutDir)\licenses\fdk-aac.txt
+)</Command>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">
     <ClCompile>
@@ -845,6 +939,18 @@ cd ../
 cd $(ProjectDir)
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\fdk-aac (
+rmdir /s /q $(OutDir)\include\fdk-aac
+)
+if exist $(OutDir)\licenses\fdk-aac.txt (
+del /f /q $(OutDir)\licenses\fdk-aac.txt
+)</Command>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
     <ClCompile>
@@ -895,6 +1001,18 @@ cd ../
 cd $(ProjectDir)
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\fdk-aac (
+rmdir /s /q $(OutDir)\include\fdk-aac
+)
+if exist $(OutDir)\licenses\fdk-aac.txt (
+del /f /q $(OutDir)\licenses\fdk-aac.txt
+)</Command>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
     <ClCompile>
@@ -944,6 +1062,18 @@ cd ../
 cd $(ProjectDir)
 )</Command>
     </PreBuildEvent>
+    <CustomBuildStep>
+      <Message>Custom Clean Step</Message>
+    </CustomBuildStep>
+    <CustomBuildStep>
+      <Outputs>force_clean</Outputs>
+      <Command>if exist $(OutDir)\include\fdk-aac (
+rmdir /s /q $(OutDir)\include\fdk-aac
+)
+if exist $(OutDir)\licenses\fdk-aac.txt (
+del /f /q $(OutDir)\licenses\fdk-aac.txt
+)</Command>
+    </CustomBuildStep>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
